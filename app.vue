@@ -1,9 +1,6 @@
 <template>
-  <div>
-    <!-- <NuxtRouteAnnouncer />
-    <NuxtWelcome /> -->
-    <AppHeader />
+  <NuxtLayout>
     <NuxtPage />
-    <AppFooter />
-  </div>
+    <NuxtNotifications position="top right" :speed="500" />
+  </NuxtLayout>
 </template>
