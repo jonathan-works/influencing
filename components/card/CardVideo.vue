@@ -26,6 +26,35 @@
 </template>
 <script setup>
 const props = defineProps(['title', 'description', 'btnText', 'color']);
-const shadowClass = computed(()=> props.color ? 'shadow-' + props.color : '');
-const bgClass = computed(() => props.color ? 'bg-' + props.color : '');
+//const shadowClass = computed(()=> props.color ? 'shadow-' + props.color : '');
+//const bgClass = computed(() => props.color ? 'bg-' + props.color : '');
+
+const shadowClass = computed(() => {
+    switch (props.color) {
+        case 'tealForest':
+            return 'shadow-tealForest';
+        case 'electricIndigo':
+            return 'shadow-electricIndigo';
+        case 'royalBlue':
+            return 'shadow-royalBlue';
+        case 'burntCoral':
+            return 'shadow-burntCoral';
+        default:
+            return '';
+    }
+});
+const bgClass = computed(() => {
+    switch (props.color) {
+        case 'tealForest':
+            return 'bg-tealForest';
+        case 'electricIndigo':
+            return 'bg-electricIndigo';
+        case 'royalBlue':
+            return 'bg-royalBlue';
+        case 'burntCoral':
+            return 'bg-burntCoral';
+        default:
+            return '';
+    }
+});
 </script>
